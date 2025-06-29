@@ -27,11 +27,14 @@ body {
 
 .apple-navbar ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
+  gap: 10px; /* reduce on smaller screens */
 }
+
 
 .apple-navbar li {
   display: flex;
@@ -113,16 +116,15 @@ body {
  margin-top:40px;
  margin-bottom:40px;
 }
-.iphone{
-  max-width:100%;
-  height:500px;
-  border-radius:12px;
-  width:800px;
+.iphone {
+  max-width: 90%;
+  height: auto;
+  width: 100%;
 }
 .mac{
   width:100%;
   height:100%;
-  background-image: url(apple-background.jpg);
+  background-image: url(assets/apple-background.jpg);
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
@@ -201,7 +203,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .ipad{
-  background-image: url(hero-ipad-pro-avail-2.jpg);
+  background-image: url(assets/hero-ipad-pro-avail-2.jpg);
   background-size: cover;
   width:100%;
   height:95%;
@@ -281,16 +283,16 @@ body {
   align-items: flex-start;
   gap:10px;
   padding:40px 20px;
-  
- 
 }
+
+
 .card{
   flex:1;
   max-width:50%;
    margin-bottom:10px;
   
   text-align:center;
-  background-image: url(macbook-pro-avail-small.jpg);
+  background-image: url(assets/macbook-pro-avail-small.jpg);
   box-sizing: border-box;
   padding:20px;
   background-size: cover;
@@ -338,7 +340,7 @@ body {
   max-width:50%;
   
   text-align:center;
-  background-image: url(ipad-air-promo.jpg);
+  background-image: url(assets/ipad-air-promo.jpg);
   box-sizing: border-box;
   padding:20px;
   background-size: cover;
@@ -365,7 +367,7 @@ body {
   flex:1;
   max-width:50%;
   text-align:center;
-  background-image: url(promo-apple-watch-two.jpg);
+  background-image: url(assets/promo-apple-watch-two.jpg);
   box-sizing: border-box;
   padding:20px;
   background-size: cover;
@@ -391,13 +393,258 @@ body {
   flex:1;
   max-width:50%;
   text-align:center;
-  background-image: url(podcast-promo.jpg);
+  background-image: url(assets/podcast-promo.jpg);
   box-sizing: border-box;
-  padding:20px;
+  /* padding:50px; */
   background-size: cover;
   background-repeat: no-repeat;
   /* background-position: */
   min-height:550px;
   position:relative;
+  color:white;
+  /* margin:15px; */
+}
+.cardfour-text{
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+  bottom:40px;
+  left:25%;
+}
+.cardfour-text h1{
+  margin-bottom:10px;
+  margin-top:0px;
+  font-size: 35px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+.cardfour-text p{
+  font-size: 20px;
+  margin-bottom:10px;
+}
+#explore{
+  border:1px solid #0071e3;
+  border-radius: 20px;
+  color:white;
+  padding:12px 24px;
+  font-size:16px;
+  transition:0.3s ease;
+  background-color: #0071e3;
+}
+#explore:hover{
+  cursor:pointer;
+  background-color: #017af3;
 
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #1d1d1f;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.apple-footer {
+  background-color: #f5f5f7;
+  padding: 40px 20px;
+  color: #6e6e73;
+}
+
+
+.footer-top {
+  max-width: 980px;
+  margin: 0 auto 30px auto;
+  font-size: 12px;
+  color: #6e6e73;
+}
+
+.footer-top p {
+  margin-bottom: 10px;
+}
+
+.footer-top a {
+  color: black;
+  /* text-decoration: none; */
+}
+
+.footer-top a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid #d2d2d7;
+}
+
+
+.column {
+  flex: 1 1 160px;
+  margin-bottom: 30px;
+}
+
+
+.column h4 {
+  font-size: 12px;
+  color: #1d1d1f;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 8px;
+  color: #6e6e73;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.column li:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .column {
+    margin-bottom: 20px;
+  }
+}
+.product-section-two{
+  display:flex;
+  flex-direction: column;
+  gap:5px 10px;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top:50px */
+}
+
+.search-form {
+  position:relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background-color: transparent;
+  overflow: hidden;
+  width: 50px;
+  height:50px;
+  transition: width 0.4s ease;
+  padding:0;
+}
+
+
+.search-form input {
+  position: absolute;
+  left:200px;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  width: 0;
+  opacity: 0;
+  /* transition: width 0.4s ease, opacity 0.3s ease; */
+  transition:all 0.4s ease;
+}
+
+.search-form input:focus {
+  outline: none;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:50px;
+  height:50px;
+  padding:0;
+}
+
+.icon-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* When focused (clicked), expand the search bar */
+.search-form:focus-within {
+  width: 250px;
+  border-radius:30px;
+}
+
+.search-form:focus-within input {
+  width: 100%;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .apple-navbar {
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .apple-navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .apple-navbar a {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  .apple-navbar i {
+    font-size: 18px;
+  }
+
+  .search-container {
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .apple-text h1 {
+    font-size: 36px;
+  }
+
+  .apple-text p {
+    font-size: 20px;
+  }
+
+  .gradient {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .btn,
+  .btn-outline {
+    width: 80%;
+    font-size: 14px;
+  }
 }
